@@ -1,0 +1,88 @@
+var ir_arriba = false;
+
+setInterval(function(){
+    if (ir_arriba) {
+        ir_arriba = false;
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+    }
+}, 1000);
+
+function ocultar_mensajes(success) {
+	$('.alert').addClass('hide');
+}
+
+function mostrar_mensaje(mensaje) {
+	ocultar_mensajes();
+	$('#'+mensaje).removeClass('hide');
+	$('html, body').animate({ scrollTop: 0 }, 'fast');
+}
+
+jQuery(function($) {
+	$('button[data-close]').on('click', function() {
+		$(this).parent().addClass('hide');
+	});
+});
+
+$(document).on('ready', function() {
+    var plantillaLimiteCV = $('#plantilla-limite-cv').html();
+    var tituloLimiteCV    = $('#plantilla-limite-cv').attr('data-titulo');
+    var plantillaCrearCV  = $('#plantilla-crear-cv').html();
+    var tituloCrearCV     = $('#plantilla-crear-cv').attr('data-titulo');
+    var botonCrearCV      = $('#plantilla-crear-cv').attr('data-boton');
+    $('.crear-cv').on('click', function() {
+        if (mcvs == 0) {
+            bootbox.dialog({
+                title: tituloLimiteCV,
+                message: plantillaLimiteCV
+            });
+            ga('send', 'event', 'PopUp', 'limite', 'newcv');
+        } else {
+            bootbox.dialog({
+                title: tituloCrearCV,
+                message: plantillaCrearCV,
+                buttons: {
+                    success: {
+                        label: botonCrearCV,
+                        className: "btn-success",
+                        callback: function() {
+                            $('#crear-nuevo-cv-form').submit();
+                        }
+                    }
+                }
+            });
+        }
+    });
+});
+
+var mostradoPopup = false;
+if (typeof cuenta !== 'undefined') {
+    setInterval(function() {
+        var tiempo    = sessionStorage.getItem("tiempo");
+        var popupCont = parseInt(sessionStorage.getItem("popupCont"));
+        var dif = (new Date().getTime() - tiempo) / 1000;
+        if (dif > 86400 && popupCont == 3) {
+            sessionStorage.setItem("popupCont", 0);
+            dif = 0;
+        }
+        if (!mostradoPopup && dif > 120 && popupCont < 3 && cuenta == 'JOB SEEKER' && !uri.match('/pdf/i')) {
+            sessionStorage.setItem("tiempo", new Date().getTime());
+            sessionStorage.setItem("popupCont", popupCont + 1);
+
+            var e = $('.plantilla_' + uri);
+            if (typeof e !== 'undefined' && e) {
+                mostradoPopup = true;
+                bootbox.dialog({
+                    title  : e.attr('data-titulo'),
+                    message: e.html(),
+                    onEscape: function() {
+                        mostradoPopup = false;
+                        sessionStorage.setItem("tiempo", new Date().getTime());
+                    }
+                });
+                ga('send', 'event', 'ForcedPopUp', 'limite', e.attr('data-ga'), {
+                    nonInteraction: true
+                });
+            } 
+        }        
+    }, 1000);
+}

@@ -1,0 +1,82 @@
+"use strict";
+
+var Coaching = (function() {
+
+	var ENDPOINT = '/api/coaching';
+	var datos    = {};
+	var config   = {};
+    var inicio   = new Date();
+
+	var log = function() {
+		if (config.debug) {
+			for (var i = 0; i < arguments.length; i++) {
+				console.log(arguments[i]);
+			}
+		}
+	};
+
+	var inicializar = function(configuracion) {
+		config = configuracion;
+		log('inicializar', configuracion);
+        crear_datos();
+        enviar();
+    };
+
+	var crear_datos = function() {
+    	datos = {
+    		'fechaInicio' : new Date(),
+	    	'idioma'      : window.navigator.language.replace('-','_'),
+            'plataforma'  : window.navigator.platform,
+            'cliente'     : window.navigator.appVersion,
+            'pagina'      : {
+                'ruta'    : window.location.pathname,
+                'url'     : window.location.href,
+                'origen'  : window.location.origin,
+                'titulo'  : document.title
+            }
+        };
+        log('crear_datos', datos);
+    };
+
+	var enviar = function() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', ENDPOINT, true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.setRequestHeader("Accept",'application/json; charset=UTF-8');
+        xhr.send("datos=" + JSON.stringify(datos));
+        xhr.onreadystatechange = function(event) {
+        	respuesta(event);
+        };
+    };
+
+	var respuesta = function(event) {
+    	var xhr = event.target;
+    	if (xhr.readyState != 4) return;
+		if (xhr.status == 200) { // Respuesta completa y correcta
+            var respuesta = JSON.parse(xhr.responseText);
+            if (respuesta.length > 0) {
+                respuesta = respuesta[0];
+                setTimeout(function() {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', ENDPOINT + '/mensaje', true);
+                    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    xhr.setRequestHeader("Accept",'application/json; charset=UTF-8');
+                    xhr.send("mensaje=" + respuesta['id']);
+                    xhr.onreadystatechange = function(event) {
+                        if (event.target.readyState != 4) return;
+                    };
+                    config.respuesta(false, respuesta);
+                }, respuesta.tiempo * 1000);
+            } else {
+                config.respuesta(false, null);
+            }
+		} else {
+			config.respuesta(true, event);
+		}
+	};
+
+	return {
+		'inicializar' : inicializar
+	}
+
+})();

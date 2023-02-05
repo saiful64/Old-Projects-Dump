@@ -1,0 +1,43 @@
+
+.container {
+  border: 2px solid #6FCF97; }
+
+.cabecera {
+  border-bottom: 2px solid #6FCF97; }
+
+.foto-box {
+  border-right: 2px solid #6FCF97; }
+
+.nombre-box {
+  border-bottom: 1px solid #6FCF97; }
+
+.nombre-box h1 {
+  color: #6FCF97; }
+
+.barra:hover, [contenteditable=true]:hover {
+  outline: 1px solid #6FCF97; }
+
+.columna2 {
+  border-left: 2px solid #6FCF97; }
+
+.seccion h1 {
+  color: #6FCF97;
+  border-bottom: 1px solid #6FCF97; }
+
+.seccion h1 i.fa {
+  color: #6FCF97; }
+
+[data-id=seccion-trabajo] .titulo {
+  color: #6FCF97;}
+
+[data-id=seccion-educacion] .titulo {
+  color: #6FCF97; }
+.barra .icono {
+  background-color: #6FCF97;
+}
+[data-id=seccion-otrosintereses] svg path {
+  color: #6FCF97;
+}
+[data-id=seccion-otrosintereses] svg path {
+  fill: #6FCF97;
+}

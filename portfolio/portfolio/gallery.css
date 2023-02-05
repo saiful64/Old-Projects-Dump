@@ -1,0 +1,56 @@
+body{
+    margin:auto
+    padding:0;
+    font-family: 'Quicksand', sans-serif;
+    background: url(IMG-20191014-WA0066.jpg);
+    background-size:auto;
+
+
+}
+
+.gallery{
+    position:fixed;
+    right:0;
+    bottom: 60px;
+    color:white;
+    padding: 0 50px;
+    display:contents 
+    
+}
+.gallery .image{
+    width:23%;
+    margin: 2%;
+    float: left;
+}
+.image img{
+    width: 100%;
+}
+.mb{
+     position:absolute;
+     right: 0;
+     top: 10px;
+     color: white;
+     font-family: verdana;
+
+}
+.mb ul{
+    display:flex;
+    list-style:none;
+    font-size: 2em;
+    font-style:normal;
+    color:white;
+}
+.mb ul li{
+    width: 260px;
+    margin: 10px;
+    padding:5px;
+    color: white;
+}
+h2{
+    font-size: 90px;
+    padding-right: 40px;
+    border-bottom: 1px solid white;
+    text-transform: uppercase;
+    color: white;
+    bottom: 30px;
+}

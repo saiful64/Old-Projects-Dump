@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="test:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/test_jar</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="testfx.Model.main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="nativeBundle" value="all" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="module-output" name="test" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/commons-validator-1.4.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/commons-codec-1.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/Microsoft JDBC Driver 7.2 for SQL Server/sqljdbc_7.2/enu/mssql-jdbc-7.2.1.jre8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="C:/mysql-connector-java-8.0.15/mysql-connector-java-8.0.15.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

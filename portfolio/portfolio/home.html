@@ -1,0 +1,68 @@
+<html>
+<head>
+<title></title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+    
+    <body>
+    
+        <div class="background">
+            <div class="nav">
+            <a class="a" href="home.html">HOME</a>
+            <a class="b" href="aboutus.html">ABOUT US</a>
+            <a class="c" href="gallery.html">GALLERY</a>
+            <a class="d" href="contactus.html">CONTACT US</a>    
+            
+            
+            </div>
+            
+            <div class="content">
+                
+                <div class="home">
+                 <h1>I am Debasish</h1>
+                    <h3>BCA Student</h3>
+                    
+                </div>
+            
+            
+            
+            </div>
+        
+        </div>
+    
+        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('a').click(function(){
+           //alert("i am click");     
+            var selected = $(this);
+            $('a').removeClass('active');
+            $(selected).addClass('active');    
+            });
+            
+            var $a = $('.a'),
+            $b = $('.b'),
+            $c = $('.c'),
+            $d = $('.d'),
+            $home = $('.home'),
+            $about us = $('.aboutus'),
+            $gallery = $('.gallery'),
+            $contactus = $('.contactus'),;
+                
+            
+            $a.click(function(){
+                $home.fadeIn();
+                $about us.fadeOut();
+               
+            });
+                $b.click(function(){
+                $home.fadeOut();
+                $about us.fadeIn();
+              
+            
+        });                    
+                
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Porfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Long+Cang|Mansalva&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="profile">
+            <img src="image/portrait.jpeg">
+            
+        </div>
+        <div class="nav">
+            <a class="a active" href="#">HOME</a>
+            <a class="b" href="#">ABOUT ME</a>
+            <a class="c" href="#">SKILLS/PROJECTS</a>
+            <a class="d" href="#">PHOTO GALLERY</a>
+            <a class="e" href="#">CONTACT ME</a>
+        </div>
+        <div class="content">
+            <div class="home">
+                <h1 id="shadow"> Saiful Islam</h1>
+                <h3> DEVELOPER | GAMER | ADVENTURER | EX- KV'ian</h3>
+            </div>
+            <div class="aboutme">
+                <p>
+                    <b>Hello stalkers!!! </b><br> Welcome to my very own portfolio. <br>
+                    So, basically i have a strong concept <b>in C,C++,JAVA,DBMS</b> and coding from past 4 years. <br>
+                    Currently i am wornking on <i>Android and JavaScript</i> projects. 
+                </p>
+                <p>
+                     In future i would like to add <b>KOTLIN, Machine Learning, Python, Ruby, and many more</b> in my list. <br><br>
+                     Till now i worked on various small projects few are listed:
+                </p>
+
+                        <ul>
+                            <li>e- Voting Application</li>
+                            <li>Student Database Management</li>
+                            <li>Hotel Management</li>
+                            <li>Gas Cylinder Booking</li>
+                            <li>and many more....</li>
+                        </ul>
+                
+            
+            </div>
+
+
+        </div>
+        <div class ="gallery">
+            <h1>Moments spent</h1>
+            <div class="image">
+                <img src="image/investiture.JPG"/>
+            </div>
+            <div class="image">
+                <img src="image/auxesis.jpg"/>
+            </div>
+            <div class="image">
+                <img src="image/avengers.JPG"/>
+            </div>
+            <div class="image">
+                <img src="image/happy.JPG"/>
+            </div>
+            <div class="image">
+                <img src="image/kbh.JPG"/>
+            </div>
+            <div class="image">
+                <img src="image/pubg.jpg"/>
+            </div>
+        </div>
+        <div class="contactme">
+                <h2>You guys can contact me on below listed:</h2>
+            <p></p>
+                <ul>
+                    <li><a style="color: red;" href="https://www.facebook.com/saiful64">Facebook</a>   </li>
+                    <li><a style="color: red;" href="https://www.instagram.com/saiful_64/">Instagram</a>  </li> 
+                    <li><a style="color: red;" 
+                           href="https://www.linkedin.com/in/saiful-islam-62a640150/">LinkedIn</a></li>
+                </ul>
+           
+        </div>
+        <div class="skillproject">
+            <h1 class="head"><b>SKILLS</b></h1>
+            <ul class="li">
+                <li>Gamer</li>
+                <li>Presenter</li>
+                <li>Android Desktop Application Developer</li>
+                <li>Adaptive</li>
+                <li>Good Listener</li>
+                <li>Chess Stategist</li>
+                <li>Handling Situation</li>
+            </ul>
+            <br><br><br>
+            <h1 class="head"><b>PROJECTS</b></h1>
+            <ul class="li">
+                <li>e- Voting Application</li>
+                <li>Gas Cylinder Booking</li>
+                <li>Hotel Management</li>
+                <li>Student Performa</li>
+                <li>and certain under development projects</li>
+            </ul>    
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('a').click(function(){
+                //alert("clicked");
+                var selected = $(this);
+                $('a').removeClass('active');
+                $(selected).addClass('active');
+            });
+            
+            var $a = $('.a'),
+            $b = $('.b'),
+            $c = $('.c'),
+            $d = $('.d'),
+            $e = $('.e'),
+            $home = $('.home'),
+            $aboutme = $('.aboutme'),
+            $skillproject = $('.skillproject'),
+            $gallery = $('.gallery'),
+            $contactme  =$('.contactme');
+            
+            $a.click(function(){
+                $home.fadeIn();
+                $aboutme.fadeOut();
+                $skillproject.fadeOut();
+                $gallery.fadeOut();
+                $contactme.fadeOut();
+            });
+            $b.click(function(){
+                $home.fadeOut();
+                $aboutme.fadeIn();
+                $skillproject.fadeOut();
+                $gallery.fadeOut();
+                $contactme.fadeOut();
+            });
+            $c.click(function(){
+                $home.fadeOut();
+                $aboutme.fadeOut();
+                $skillproject.fadeIn();
+                $gallery.fadeOut();
+                $contactme.fadeOut();
+            });
+            
+            $d.click(function(){
+                $home.fadeOut();
+                $aboutme.fadeOut();
+                $skillproject.fadeOut();
+                $gallery.fadeIn();
+                $contactme.fadeOut();
+            });            
+            $e.click(function(){
+                $home.fadeOut();
+                $aboutme.fadeOut();
+                $skillproject.fadeOut();
+                $gallery.fadeOut();
+                $contactme.fadeIn();
+            });
+            
+        });
+        
+        
+        
+    </script>
+    
+    
+</body>
+
+</html>

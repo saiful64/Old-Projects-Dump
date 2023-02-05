@@ -1,0 +1,234 @@
+* {
+  font-family: 'Quicksand', sans-serif; }
+
+#hojas {
+  zoom: 1.5;
+}
+
+.cv-pdf {
+  padding: 15px 15px 15px 15px;
+  margin-bottom: 15px;
+}
+.cabecera {
+  height: 112px; }
+
+.foto-box {
+  padding: 10px;
+  margin: 0;
+  width: 112px;
+  height: 100%;
+  float:left;}
+
+.foto-box img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.datos-box {
+  padding: 0 18px;
+  width: 450px;
+  margin-left: 110px; }
+
+.nombre-box {
+  padding-top: 15px;
+  margin: 0; }
+
+.nombre-box h1 {
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0 0 0 20px; }
+
+.nombre-box h2 {
+  font-size: 15px;
+  font-weight: 100;
+  color: #111;
+  font-style: italic;
+  padding: 0 0 10px 0;
+  margin: 10px 0 0 20px; }
+
+.mayus-negrita {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.contacto-box {
+  color: #111;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 0 20px;
+  font-size: 9px;  }
+
+.contacto-box [data-info=telefono] {
+  display: inline-block;
+  min-width: 80px;
+}
+.cuerpo {
+  padding: 21px 28px 20px 33px; }
+
+.contenido {
+  width: 100%;}
+
+.columna1 {
+  width: 325px;}
+
+.columna2 {
+  width: 188px;}
+
+.columna1, .columna2 {
+  height: 100%;}
+
+.cv-pdf:first-child .columna1, .cv-pdf:first-child .columna2 {
+  height: 100%;}
+
+.columna2 .seccion:not(:first-child) {
+  padding-top: 0;
+}
+.columna2 .seccion {
+  padding-bottom: 5px;
+}
+
+.seccion {
+  padding: 10px 20px;
+  font-size: 8px; }
+
+.seccion h1, .seccion h1 [data-info=titulo] {
+  margin: 5px 0;
+  font-size: 13px; }
+
+.seccion h1 i.fa {
+  font-size: 0.9em; }
+
+.seccion h1 {
+  text-transform: uppercase;
+}
+
+.columna1 .contenido-seccion {
+  padding: 0 }
+
+.bloque {
+  padding: 5px 0;
+  margin-top: 5px; }
+
+[data-id=seccion-trabajo] [data-info=titulo] {
+  text-transform: uppercase;
+  margin-bottom: 3px; }
+
+[data-id=seccion-trabajo] .lugar {
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 3px; }
+
+[data-id=seccion-trabajo] .fechas {
+  font-style: italic;
+  color: #111;
+  margin-bottom: 3px; }
+
+[data-id=seccion-trabajo] .descripcion {
+  color: #111; }
+[data-id=seccion-educacion] [data-info=titulo] {
+  text-transform: uppercase;
+  margin-bottom: 3px; }
+
+[data-id=seccion-educacion] .lugar {
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 3px; }
+
+[data-id=seccion-educacion] .fechas {
+  font-style: italic;
+  color: #111;
+  margin-bottom: 3px; }
+
+[data-id=seccion-educacion] .descripcion {
+  color: #111; }
+div[data-id=seccion-idioma] ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #111;
+}
+div[data-id=seccion-idioma] li {
+  margin: 0;
+}
+div[data-id=seccion-objetivo] {
+  color: #111;
+}
+div[data-id=seccion-sobremi] {
+  color: #111;
+}
+div[data-id=seccion-habilidad] ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #111;
+}
+div[data-id=seccion-habilidad] li {
+  margin: 0;
+}
+div[data-id=seccion-qr] table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0;
+  padding: 0;
+  height: 92px;
+}
+div[data-id=seccion-qr] .contenido-seccion {
+  color: #111;
+  height: 92px;
+}
+div[data-id=seccion-qr] .contenido-seccion table td {
+  vertical-align: top;
+  height: 92px;
+}
+div[data-id=seccion-qr] img {
+  width: 90px;
+  height: 90px;
+}
+div[data-id=seccion-otrosintereses] ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+div[data-id=seccion-otrosintereses] li {
+  margin: 0;
+  padding: 0;
+}
+div[data-id=seccion-otrosintereses] .contenido-seccion table td {
+  vertical-align: middle;
+  color: #111;
+}
+div[data-id=seccion-otrosintereses] .contenido-seccion table td:first-child {
+  vertical-align: top;
+}
+div[data-id=seccion-otrosintereses] li .imagen svg {
+  width: 35px;
+}
+div[data-id=seccion-otrosintereses] li .imagen:hover {
+  cursor: pointer;
+}
+div[data-id=seccion-otrosintereses] li .imagen.selector {
+  margin-right: 5px;
+}
+
+.datos-box.off {
+  width: 100% !important;
+}
+
+.titulo.off {
+  visibility: hidden;
+  display: block !important;
+}
+
+.titulo.on {
+  visibility: inherit;
+}
+
+.headline {
+  overflow: hidden;
+  height: 28px;
+}
+
+div[data-id=seccion-curso] .bloque .titulo {
+  font-weight: bold; 
+}

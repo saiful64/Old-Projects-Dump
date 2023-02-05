@@ -1,0 +1,12 @@
+var lastHeight = 0, curHeight = 0;
+setInterval(function() {
+	var iframe = document.getElementById('iframe-pdf');
+	if (iframe) {
+		var cuerpo = iframe.contentWindow.document.body || iframe.contentDocument.body
+		curHeight  = cuerpo.scrollHeight + 20;
+		if (curHeight != lastHeight) {
+			iframe.height = curHeight + "px";
+			lastHeight = curHeight;
+		}
+	}
+}, 500);

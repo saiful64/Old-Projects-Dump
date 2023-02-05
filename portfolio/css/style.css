@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    width:100%;
+    height: 100%;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.background{
+    width: 100%;
+    height: 100%;
+    background-image: url(../image/bg.jfif);
+    background-repeat: no-repeat;
+    background-size:cover;
+    position:relative;
+    overflow-y: auto;
+    
+     
+    
+    
+}
+.profile img
+{
+    display:fixed;
+    margin-left: 50px;
+    width:250px;
+    height:250px; 
+    border-radius: 50%;
+    
+}
+
+.nav{
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 30%;
+    left: 30px;
+}
+.nav a{
+    text-decoration:inherit;
+    font-size: 20px;
+    font-family: verdana;
+    font-weight: bold;
+    border-radius: 5px 100px;
+    height: 90px;
+    margin: 5px 0;
+    float:left;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    line-height: 90px;
+    text-align:center;
+    transition: 500ms;
+}
+
+a.active, .nav a:hover{
+     background-color: white;
+    color: black;
+    width: 100%;
+}
+.a{
+    width: 95%
+}
+
+.b{
+   width: 70%; 
+}
+.c{
+    width: 85%;
+}
+.d{
+    width: 75%;
+}
+.e{
+    width: 90%;
+}
+
+.content{
+    position: absolute;
+    width: 930px;
+    min-height: 500px;
+    height: auto;
+    right: 0;
+    top: 15%;
+    
+}
+
+.home{
+    position: absolute;
+    right: 0;
+    border: -50px;
+    color: white;
+    font-family: verdana;
+    text-transform: uppercase;
+
+}
+
+.home h1{
+    font-size: 65px;
+    padding: 50px;
+    border-bottom: 0.5px solid white;
+    text-transform: uppercase;
+    
+
+}
+h1#shadow
+{
+ text-shadow: 0px 10px 9px #ffff;
+transform: scale(1,1);
+    transform: skew(-15deg);
+
+}
+.home h3{
+    font-size:  20px;
+    padding: 5px 0;
+    opacity: 0.6;
+    transform: translateX(7%);
+}
+.aboutme{
+    position:absolute;
+    right: 0;
+    top: -80px;
+    color: white;
+    font-family: century gothic;
+    padding: 0 60px;
+    display: none;
+    text-align:right;
+    letter-spacing: 1px;
+}
+.aboutme p{
+    font-size: 30px;
+    line-height: 28px;
+    margin-bottom: 15px;
+    font-family: 'Long Cang', cursive;
+    
+}
+.aboutme ul{
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 15px;
+    font-family: 'Mansalva', cursive;
+}
+
+.gallery{
+    position: absolute;
+    right: 0;
+    left: 30%;
+    top: 10px;
+    color: white;
+    padding: 0 60px;
+    display: none;
+    
+}
+.gallery  .image{
+    width: 30%;
+    margin: 5%;
+    float:left;
+}
+
+.image img{
+    width: 100%;
+    transition: all ease 0.1s;
+    -webkit-transition: all ease 0.1s;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+.image img:hover{
+    transform: scale(2);
+    -webkit-transform: scale(2);
+}
+.contactme {
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    color: white;
+    font-family: century gothic;
+    padding: 50px 60px 50px 50px;
+    line-height: 50px;
+    display: none;
+}
+
+.skillproject {
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    color: white;
+    font-family: century gothic;
+    padding: 50px 60px 50px 50px;
+    line-height: 50px;
+    display: none;
+}
+
+.skillproject .head {
+    font-family:fantasy;
+}
+.skillproject .li {
+    font-size: 25px;
+    font-family: 'Mansalva', cursive;
+}
